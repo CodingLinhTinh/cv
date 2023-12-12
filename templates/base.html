@@ -1,0 +1,79 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=600,user-scalable=1.0"/>
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://stats.g.doubleclick.net">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CV - Nicole">
+    <meta name="twitter:description" content="I'm Ngoc (Nicole) Quach Bao. This is the CV page on my Blog NicoleNews! You can download my CV here!">
+    <title>CV - Nicole</title>
+    <meta name="keywords" content="Blogger, NicoleCV"/>
+    <meta name="description"
+          content="I'm Ngoc (Nicole) Quach Bao. This is the CV page on my Blog NicoleNews! You can download my CV here!"/>
+    <meta name="author" content="Nicole"/>
+    <meta property="og:title" content="CV - Nicole"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="CV - Nicole"/>
+    <meta property="og:image" content="common/img/cv-wide.png"/>
+    <meta property="og:site_name" content="Nicole"/>
+    <meta property="og:description"
+          content="I'm Ngoc (Nicole) Quach Bao. This is the CV page on my Blog NicoleNews! You can download my CV here!"/>
+    <meta property="fb:admins" content="100003912251390"/>
+    <link rel="shortcut icon" href="https://img.icons8.com/material-outlined/24/source-code.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="https://img.icons8.com/material-outlined/24/source-code.png">
+<!--    <link rel="stylesheet" href="/common/css/CVv0.2.css">-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/CV.v0.3.css') }}"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="mask-icon" href="https://www.resumemaker.online/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+</head>
+
+<body class="locked vsc-initialized" style="overflow: visible;" data-new-gr-c-s-check-loaded="14.979.0"
+      data-gr-ext-installed="" data-new-gr-c-s-loaded="14.979.0">
+<div class="loading" style="background: #ff03ff;">
+    <div class="loading_gradient"></div>
+</div>
+<div class="video-bg">
+    <div class="vsc-controller"></div>
+    <video width="320" height="240" autoplay="" loop="" muted="">
+        <source src="https://media.istockphoto.com/id/1350901820/vi/video/4k-t%C6%B0%C6%A1ng-lai-neon-tia-c%E1%BB%B1c-t%C3%ADm-hu%E1%BB%B3nh-quang-%C4%91%C6%B0%E1%BB%9Dng-h%E1%BA%A7m-%C3%A1nh-s%C3%A1ng-c%C3%B3-th%E1%BB%83-l%E1%BA%B7p-l%E1%BA%A1i-ho%E1%BA%A1t-h%C3%ACnh-%C4%91en.mp4?s=mp4-640x640-is&k=20&c=gH0DuSoj8av_FdvJqNAULjAnpfKIPAVZLSskj-uEhNI=" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+<label class="fab">
+    <div class="fab-menu">
+        <div id="toprint" class="btn fab-btn placeholder" onclick="printDiv()">&nbsp;<i class="bi bi-printer-fill"></i>&nbsp;
+        </div>
+    </div>
+    <div class="fab-blank"></div>
+</label>
+<script>
+    function printDiv() {
+
+        let printContents = document.getElementById('wrapper').innerHTML;
+        let originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        document.body.classList.add('print-setting');
+        setTimeout(function () {
+            window.print();
+        }, 1000);
+        setTimeout(function () {
+            document.body.innerHTML = originalContents;
+            document.body.classList.remove('print-setting');
+        }, 5000);
+
+    }
+</script>
+{% block content %}{% endblock %}
+</body>
+</html>

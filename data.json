@@ -1,0 +1,115 @@
+{
+    "information": [
+        {
+            "name": "NGOC (Nicole) QUACH BAO",
+            "profession": "Python Backend Web Developer",
+            "phone": "079 959 2581",
+            "email": "nicolequachworkspace@gmail.com"
+        }
+    ],
+    "porfolio": [
+        {
+            "platform":"linkedin",
+            "icon":"linkedin",
+            "url":"https://www.linkedin.com/in/nicolequach/",
+            "name":"Ngoc Quach Bao"
+        },
+        {
+            "platform":"github",
+            "icon":"github",
+            "url":"https://github.com/CodingLinhTinh",
+            "name":"CodingLinhTinh"
+        },
+        {
+            "platform":"website",
+            "icon":"facebook",
+            "url":"https://www.facebook.com/nicole.quach0408",
+            "name":"Quach Bao Ngoc"
+        }
+    ],
+    "programming_skills": ["Python", "Flask", "HTML", "CSS","Javascripts"],
+    "service": ["SQLite", "Microsoft Azure"],
+    "tools": ["Git", "Github", "Notion", "Trello"],
+    "development": ["Agile", "Scrum"],
+    "certification": [
+        {
+            "url":"https://coursera.org/share/1af775e2d6a421f82d7103f30e46a7c6",
+            "src": "static/img/R.png",
+            "content": "Scrum Master Certification: Scaling Agile and the Team-of-Teams" 
+        },
+        {
+            "url":"https://www.coursera.org/account/accomplishments/verify/WXLAA5RAZLMW?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course",
+            "src": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/70/de505d47be7d3a063b51b6f856a6e2/New-Block-M-Stacked-Blue-295C_600x600.png?auto=format%2Ccompress&dpr=1&w=80&h=80",
+            "content": "Python Data Structures - University of Michigan" 
+        },
+        {
+            "url":"https://www.udemy.com/certificate/UC-20f3e903-de3f-4775-8a15-cc4f268ab42b/",
+            "src": "static/img/Udemy-icon.jpg",
+            "content": "100 Days of Code: The Complete Python Pro Bootcamp for 2023" 
+        } 
+    ],
+    "work_exps": [
+        {
+            "title": "Backend Python Web Developer, Software Engineer",
+            "company":"AI-Growth",
+            "date":"Jul 2023 - Now, 5 mos",
+            "content":"This cutting-edge Automation and Marketing platform for social media combines streamlined automation features like scheduled content posting with powerful marketing tools, including targeted ad campaigns and AI-driven trend analysis. Designed for ease of use and security, it empowers users to navigate the dynamic social media landscape with confidence."
+        },
+        {
+            "title": "Python Developer",
+            "company":"Upwork",
+            "date":"Jan 2023 - Jul 2023, 7 mos",
+            "content":"Gathering and analyzing information as per customer needs, the project involves meticulous data cleaning. It culminates in the creation of a user-friendly web app, allowing seamless access, viewing, and filtering of data tailored to individual preferences."
+        },
+        {
+                "title": "Bitrix PHP Developer",
+                "company":"MSCorp",
+                "date":"Dec 2022 - Jan 2023, 2 month",
+                "content":" My proficiency in developing a PHP-based plugin that seamlessly integrates the ZALO API with Bitrix24 CRM software is a testament to my technical expertise. This integration not only showcases my skills in PHP development but also enhances the functionality of Bitrix24 by seamlessly connecting it with the ZALO API, thereby facilitating effective communication and data management within the CRM platform. My contribution reflects a deep understanding of both technologies and a commitment to optimizing business processes through innovative solutions. "
+        },
+        {
+            "title": "FrontEnd Developer",
+            "company":"OnlCRM",
+            "date":"Oct 2022 - Dec 2023, 2 month",
+            "content":"In my role as a Frontend Developer, I specialize in translating UI/UX design principles into code, crafting intuitive and visually appealing user interfaces. My focus is on creating seamless and engaging digital experiences, ensuring that the frontend aligns seamlessly with the design vision to enhance overall user satisfaction and usability."
+    }
+    ],
+    "projects": [
+        {
+            "title": "TikiClawer",
+            "url":"https://github.com/CodingLinhTinh/TikiClawer.git",
+            "date":"Apr 2023 - May 2023",
+            "skills":"Object-Oriented Programming (OOP), Problem Solving, Web Scraping, Data Scraping, Data Analysis, Python (Programming Language), Selenium",
+            "content":"Developing a straightforward Tiki information gathering tool, I aim to streamline data extraction and export it into a CSV file, seamlessly compatible with Woocommerce. This tool will enable a hassle-free import process, facilitating efficient data transfer and integration into Woocommerce for enhanced usability and management."
+        },
+        {
+            "title": "SocialMediaAutomation",
+            "url":"https://github.com/CodingLinhTinh/SocialMediaAutomation.git",
+            "date":"Jul 2023 - Now",
+            "skills":"Object-Oriented Programming (OOP), Problem Solving, Web Scraping, Flask, Automation, Python (Programming Language) ",
+            "content":"This web app, constructed using Flask, serves as a versatile toolkit for social media automation. Leveraging the power of Flask, it provides users with an array of tools to streamline and enhance their social media automation processes."
+        }
+    ],
+    "activities": [
+        {
+            "title": "Associate Development Team Lead",
+            "place":"E-commerceClub@UIT",
+            "date":"Sep 2022 - Now"
+        }
+    ],
+    "edu": [
+        {
+            "name":"University of Information Technology - UIT",
+            "school":"VietNam National University HCMC",
+            "date":"Sep 2020 - Sep 2024"
+
+        },
+        {
+            "name":"English experimental class",
+            "school":"Long Xuyen High School",
+            "date":"Aug 2017 - Jun 2020"
+
+        }
+    ]
+    
+}

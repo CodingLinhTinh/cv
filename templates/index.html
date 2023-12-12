@@ -1,0 +1,256 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div id="edit" style="display: block; opacity: 1;">
+        <div id="wrapper">
+            <!-- pequeno and grande -->
+            <div id="imprimir" class="template1 pequeno">
+                <div id="contimprimir" style="font-family: Poppins;opacity: 1;transform: scale(1);margin-top: -25px;">
+                    {% for information in data.information %}
+                        <ul>
+                            <li class="li100" id="nombre_cont">
+                                <div><span></span>
+                                    <div class="centradovertical" id="centrado_nombre">
+                                        <p class="nombre color text-center" contenteditable="false" placeholder="Your name"
+                                        id="nombre" style="color: #ff03ff;">{{ information.name }}</p>
+                                        <p class="titulo1 text-center" contenteditable="false"
+                                        placeholder="Your profession or speciality" id="titulo" style="display: block;">
+                                        {{ information.profession }}
+                                        </p>
+                                        <div class="contact-top">
+                                            <table id="table" style="width:100%; table-layout: fixed;">
+
+                                                <tbody>
+                                                <tr>
+                                                    <td style="text-align: right;">
+                                                        <a href="tel:+84{{ information.phone }}">
+                                                            <p class="texto" contenteditable="false"
+                                                            placeholder="Enter your phone number" style="display: contents;">
+                                                            {{ information.phone }}</p>
+                                                            <i class="bi bi-telephone-fill"></i>
+                                                        </a>
+                                                    </td>
+                                                    <td width="15px">
+                                                        <i class="bi bi-grip-vertical"></i>
+                                                    </td>
+                                                    <td>
+                                                        <a href="mailto: {{ information.email }}">
+                                                            <i class="bi bi-envelope-fill"></i>
+                                                            <p class="texto" contenteditable="false"
+                                                            placeholder="Enter your email" style="display: contents;">
+                                                            {{ information.email }}</p>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    {% endfor %}
+
+                    <ul>
+                        <li class="li27" id="datospersonales">
+                            <div id="perfil" style="display: block;">
+                                <p class="titulo1" contenteditable="false" placeholder="Profile" style="display: block;">
+                                    Profile</p>
+                                <p class="texto" contenteditable="false"
+                                placeholder="Write here a paragraph about yourself or you can change the title to read 'Objective'."
+                                style=" text-align: justify;">
+                                Hello, I'm Nicole Quach, a Backend Python developer skilled in creating efficient applications. I specialize in Python and Flask, with a focus on designing scalable backend systems. My expertise includes database management, API design, and optimizing code for performance. I'm committed to staying updated on the latest technologies and best practices, ensuring clean and maintainable code.</p>
+                            </div>
+                            <p class="titulo1 contact_title" contenteditable="false" placeholder="Portfolios">Portfolios</p>
+                            <div class="contacto_item sortable" draggable="true" id="mail" style="display: none;">
+                                <div><img draggable="false" alt="" class="color_estrellas"
+                                        src="/static/img/email.png"
+                                        style="background: #ff03ff;"></div>
+                                <p class="texto" contenteditable="false" placeholder="Enter your email">
+                                    nicolequachworkspace@gmail.com</p>
+                            </div>
+                            <div class="contacto_item sortable" draggable="true" id="tel" style="display: none;">
+                                <div><img draggable="false" alt="" class="color_estrellas"
+                                        src="/static/img/tel.png"
+                                        style="background: #ff03ff;"></div>
+                                <a href="tel:+84799592581">
+                                    <p class="texto" contenteditable="false" placeholder="Enter your phone number">079 959 2581</p>
+                                </a>
+                            </div>
+
+                            {% for por in data.porfolio %}
+                                <div class="contacto_item sortable" draggable="true" id="{{ por.platform }}" style="display: block;">
+                                    <a href="{{ por.url }}" target="_blank">
+                                        <p class="texto" contenteditable="false" placeholder="yourProfile"><i
+                                                class="bi bi-{{ por.icon }} red-color icon-left"></i> {{ por.name }}
+                                        </p>
+                                    </a>
+                                </div>
+                            {% endfor %}
+
+                            <p class="titulo1 titulo2" contenteditable="false" placeholder="Custom text">Programming Skills
+                            </p>
+                            <div class="prog-box">
+                                {% for skill in data.programming_skills %}
+                                    <div class="prog-item sortable" draggable="true">{{skill}}</div>
+                                {% endfor %}
+                            </div>
+                            <p class="titulo1 titulo2" contenteditable="false" placeholder="Custom text">Database & Cloud
+                                Services
+                            </p>
+                            <div class="prog-box">
+                                {% for service in data.service %}
+                                    <div class="prog-item sortable" draggable="true">{{service}}</div>
+                                {% endfor %}
+                            </div>
+                            <p class="titulo1 titulo2" contenteditable="false" placeholder="Custom text">Tools</p>
+                            <div class="prog-box">
+                                {% for tool in data.tools %}
+                                    <div class="prog-item sortable" draggable="true">{{tool}}</div>
+                                {% endfor %}
+                            </div>
+                            <p class="titulo1 titulo2" contenteditable="false" placeholder="Custom text">Development</p>
+                            <div class="prog-box">
+                                {% for dev in data.development %}
+                                    <div class="prog-item sortable" draggable="true">{{dev}}</div>
+                                {% endfor %}
+                                
+                            </div>
+
+
+                            <p class="titulo1 " contenteditable="false" placeholder="Custom text"
+                            style="justify-content: space-between">
+                                <a href="https://www.linkedin.com/in/nicolequach/details/certifications/" target="_blank" title="Click to open list of certifications (12 more)">
+                                    CERTIFICATIONS &nbsp;
+                                    <i class="bi bi-arrow-right-circle-fill red-color" style="vertical-align: top"></i>
+                                </a>
+                            </p>
+                            <div id="otros" class="sortable">
+                                {% for certification in data.certification %}
+                                    <a href="{{ certification.url }}"
+                                    target="_blank">
+                                        <div class="cuadro myset ui-state-default">
+                                            <div class="certi-img"><img draggable="false" alt="" class="color_estrellas"
+                                                                        src="{{ certification.src }}"
+                                                                        style="background: #ff03ff;"></div>
+                                            <p class="titulo3 certi-text" contenteditable="false" placeholder="Item">
+                                                {{ certification.content }}</p>
+                                        </div>
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        <p class="titulo1 " contenteditable="false" placeholder="Custom text">Scan me</p>
+                            <div id="QR-code">
+                                <a href="/cv" target="_blank">');
+
+                                    <img src="https://chart.googleapis.com/chart?chs=210x210&cht=qr&chld=L|0&chl=/cv&choe=UTF-8"
+                                        title="Link to CV on website" alt="QR Web" style="width: unset;"/>
+                                </a>
+
+                            </div>
+                            <p class="texto" style="font-size: 14px;margin-top:20px"><i>*Fields click to follow the
+                                pages</i></p>  
+                        </li>
+                        <li class="li73">
+                            <div id="bloqueprincipal">
+
+                                <p class="titulo1" id="titulo_laboral" contenteditable="false"
+                                placeholder="Professional experience" style="display: block;">
+                                    <a href="#" title="Click to show more details and experiences on Linkedin" target="_blank">Work Experience &nbsp; <i class="bi bi-arrow-right-circle-fill red-color" style="vertical-align: top"></i></a>
+                                </p>
+                                <div class="sortable experiencialaboral" id="experiencialaboral" style="display: block;">
+                                    {% for work_exp in data.work_exps %}
+                                        <div class="cuadro ui-state-default">
+                                            <div style="position:relative">
+                                                <div class="timeline_bola color_estrellas"
+                                                    style="background: #ff03ff;"></div>
+                                                <p class="titulo2 color" contenteditable="false" placeholder="Position"
+                                                style="color: #ff03ff;">{{ work_exp.title }}</p>
+                                            </div>
+                                            <p class="titulo3" contenteditable="false" placeholder="Employer">{{ work_exp.company }}</p>
+                                            <p class="fecha" contenteditable="false" placeholder="From - Until">{{ work_exp.date }}</p>
+                                            <p class="texto" contenteditable="false">{{ work_exp.content }}</p>
+                                            <div class="timeline_linea"></div>
+                                        </div>
+                                    {% endfor %}
+
+                                </div>
+
+                                <div id="bloqueprincipal">
+
+                                    <p class="titulo1" id="titulo_laboral" contenteditable="false"
+                                    placeholder="Professional experience" style="display: block;">
+                                        <a href="#" title="Click to show more details and experiences on Linkedin" target="_blank">Projects &nbsp; </a>
+                                    </p>
+                                    <div class="sortable experiencialaboral" id="experiencialaboral" style="display: block;">
+                                        {% for project in data.projects %}
+                                            <div class="cuadro ui-state-default">
+                                                <div style="position:relative">
+                                                    <div class="timeline_bola color_estrellas"
+                                                        style="background: #ff03ff;"></div>
+                                                    <p class="titulo2 color" contenteditable="false" placeholder="Position"
+                                                    style="color: #ff03ff;">
+                                                    <a href="{{ project.url }}" title="Click to show more details and experiences on Github" target="_blank">{{ project.title }} &nbsp; <i class="bi bi-arrow-right-circle-fill red-color" style="vertical-align: top"></i></a>
+                                                        
+                                                    </p>
+                                                </div>
+                                                <p class="titulo3" contenteditable="false">[Self]</p>
+                                                <p class="fecha" contenteditable="false" placeholder="From - Until">{{ project.date }}</p>
+                                                <p class="texto" contenteditable="false" style="white-space: pre-wrap;">{{ project.content }}</p>
+                                                <div class="timeline_linea"></div>
+                                            </div>
+                                        {% endfor %}
+    
+                                    </div>
+
+                                <p class="titulo1 education_title" contenteditable="false" placeholder="Education">
+                                    EXTRACURRICULAR ACTIVITIES</p>
+                                <div class="sortable formacionacademica" id="formacionacademica">
+                                    {% for act in data.activities %}
+                                        <div class="cuadro ui-state-default">
+                                            <div style="position:relative">
+                                                <div class="timeline_bola color_estrellas"
+                                                    style="background: #ff03ff;"></div>
+                                                <p class="titulo2 color" contenteditable="false" placeholder="Degree"
+                                                style="color: #ff03ff;">{{ act.title }}</p>
+                                            </div>
+                                            <p class="titulo3" contenteditable="false" placeholder="School">{{ act.place }}
+                                            </p>
+                                            <p class="fecha" contenteditable="false" placeholder="From - Until">{{ act.date }}</p>
+                                            <div class="timeline_linea"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <p class="titulo1 education_title" contenteditable="false" placeholder="Education">
+                                    EDUCATION</p>
+                                <div class="sortable formacionacademica" id="formacionacademica">
+                                    {% for edu in data.edu %}
+                                        <div class="cuadro ui-state-default">
+                                            <div style="position:relative">
+                                                <div class="timeline_bola color_estrellas"
+                                                    style="background: #ff03ff;"></div>
+                                                <p class="titulo2 color" contenteditable="false" placeholder="Degree"
+                                                style="color: #ff03ff;">{{ edu.name }}</p>
+                                            </div>
+                                            <p class="titulo3" contenteditable="false" placeholder="School">{{ edu.school }}</p>
+                                            <p class="fecha" contenteditable="false" placeholder="From - Until">{{ edu.date }}</p>
+                                            <div class="timeline_linea"></div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div id="bloquesecundario">
+                                <div style="clear:both"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="fin_hoja_anim">
+                    <div class="fin_hoja" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
